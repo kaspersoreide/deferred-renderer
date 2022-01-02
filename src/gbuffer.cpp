@@ -45,4 +45,7 @@ GBuffer::GBuffer() {
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
         std::cout << "error! incomplete framebuffer!\n";
     }
+
+    // unbind framebuffer
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
